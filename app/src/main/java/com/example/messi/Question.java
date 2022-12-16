@@ -1,5 +1,7 @@
 package com.example.messi;
 
+import android.app.AlertDialog;
+
 public class Question
 {
     private String content;
@@ -64,6 +66,13 @@ public class Question
         this.points = points;
     }
 
+    /****************************************************
+     * nazwa: checkAnswer()
+     * co robi: dodaje punkty jeżeli poprawna odpowiedź jest taka sama jak odpowiedź wybrana przez użytkownika, w przeciwnym wypadku liczba punktów zostaje bez zmian
+     * co zwraca: nie zwraca żadnej wartości
+     * argumenty: trueAnswer, selectAnswer, points
+     */
+
     public void checkAnswer()
     {
         if(trueAnswer == selectedAnswer)
@@ -74,5 +83,17 @@ public class Question
         {
             points = points;
         }
+    }
+
+    /****************************************************
+     * nazwa setAnswer()
+     * co robi: przypisuje indeks odpowiedzi
+     * co zwraca: nic nie zwraca
+     * argumenty: selectedAnswer
+     */
+
+    public void setAnswer(int selectedAnswer)
+    {
+        this.selectedAnswer = selectedAnswer;
     }
 }
